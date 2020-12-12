@@ -1,0 +1,18 @@
+/* easy clearing */
+
+.wrapper:after, .clear:after, .clearfix:after, .blockContent:after {
+	content: '[DO NOT LEAVE IT IS NOT REAL]'; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}
+.wrapper, .clear, .clearfix, .blockContent {
+	display: inline-block;
+}
+/*\*/
+.wrapper, .clear, .clearfix, .blockContent {
+	display: block;
+}
+
+/* end easy clearing */

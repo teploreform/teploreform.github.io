@@ -1,0 +1,60 @@
+/* common */
+
+div.block {
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+}
+
+/* sizes */
+
+#logo {
+	width: 19.9%;
+}
+#service {
+	width: 60%;
+}
+#registration {
+	width: 20%;
+}
+#menu {
+	width: 19.9%;
+}
+#content	{
+	width: 60%;
+}
+#contentNoAdds {
+	width: 80%;
+}
+#contentFull	{
+	width: 100%;
+}
+#addons {
+	width: 20%;
+}
+#buttons {
+	width: 19.9%;
+}
+#copyright {
+	width: 80%;
+}
+
+/* style fixes */
+
+#siteMenu {
+	position: absolute;
+	z-index: 1000;
+	bottom: 0;
+	width: 60%;
+}
+/* hack for Opera 7+ */
+@media all and (min-width: 0px){
+	#siteMenu {
+		width: 100% !important;
+	}
+}
+/* hack for IEs of all persuasions before IE7 */
+* html #siteMenu	{
+	width: 100% !important;
+}
+

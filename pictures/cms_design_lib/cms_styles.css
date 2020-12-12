@@ -1,0 +1,497 @@
+/* редакторская панель */
+
+BODY.toolbared {
+	margin-top: 25px;
+	}
+DIV#toolbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+	width: 100%;
+	font-family: "Trebuchet MS", "Geneva CY", Verdana, Helvetica, sans-serif;
+  font-size: 10px;
+	text-align: left;
+  opacity: .8;
+  filter: alpha(opacity=80);
+  -moz-opacity: .8;
+  background: #d00 url(cms_toolbar_bg.gif) repeat-x;
+	}
+* HTML DIV#toolbar {
+	position: absolute;  
+	}
+#toolbarToggle {
+  padding: 7px 0 0 35px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #d00;
+	height: 18px;
+  background: url(loading.gif) no-repeat 5px 2px;
+	}
+#toolbarMenu {
+	color: #d00;
+	width: 100%;
+	height: 25px;
+	clear: both;
+	border-bottom: 1px solid #E74B4B;
+	}
+#toolbarMenu DIV {
+	height: 25px;
+	}
+#toolbarSys {
+	float: left;
+	}
+#toolbarEdit {
+	float: left;
+	}
+#toolbarAdds {
+	float: right;
+	}
+#toolbarAdds FORM {
+	float: left;
+	}
+#toolbarMenu SELECT {
+	font-size: 12px !important;
+	font-family: "Trebuchet MS", "Geneva CY", Verdana, Helvetica, sans-serif !important;
+	border: 1px solid #d00;
+	background-color: #fdd;
+	color: #d00;
+	vertical-align: middle;
+	float: left;
+	margin: 3px;
+	height: 18px;
+	*height: 20px;
+	}
+#toolbarMenu A {
+  font-size: 12px !important;
+  display: block;
+  float: left;
+	font-weight: normal;
+  margin: 3px;
+  height: 18px;
+	}
+#toolbarMenu A, A.edit {
+  border: 1px solid #d00 !important;
+  background-color: #fdd !important;
+  color: #d00 !important;
+  font-size: 12px !important;
+  font-family: "Trebuchet MS", "Geneva CY", Verdana, Helvetica, sans-serif !important;
+  text-decoration: none !important;
+  padding: 0 5px;
+	}
+#toolbarMenu A:visited, A.edit:visited {
+  color: #d00 !important;
+  text-decoration: none !important;
+	}
+#toolbarMenu A:hover, #toolbarMenu SELECT:hover, A.edit:hover {
+  background-color: #d00 !important;
+  color: #fff !important;
+	}
+A.edit {
+	font-size: 90%;
+	font-weight: bold;
+	}
+IMG.edit {
+	display: inline-block;
+	vertical-align: middle;
+	}
+
+/* стили в формах редактирования */
+
+form {
+	padding: 0;
+	margin: 0;
+	}
+
+TABLE.formTable {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  width: 100%;
+	text-align: left;
+	}
+TABLE.formTable TD,
+TABLE.formTable TD TABLE.formTable TD {
+	height: 17px;
+  padding: 5px 0;
+  border-top: 1px solid #c9c9c9;
+	}
+TABLE.formTable TD TABLE.formTable TD {
+  border-top: 1px dotted #c9c9c9;
+	}
+TABLE.formTable TD TABLE TD {
+  border-top: 0px;
+  padding: 0px;
+	height: auto;
+	}
+TABLE.formTable TD.formLabel,
+TABLE.formTable TD TABLE.formTable TD.formLabel {
+  padding: 7px 6px 6px 0;
+	vertical-align: top;
+	}
+.formField, .formField INPUT, .formField SELECT, .formField TEXTAREA,
+.formField TD {
+  font-size: 100%;
+	}
+TABLE.formTable .formLabel {
+  font-size: 100%;
+  vertical-align: middle;
+	}
+DIV.formBlock {
+  border-top: 1px solid #c9c9c9;
+	padding: 6px;
+	}
+.formField .formLabel {
+	padding: 2px 0;	
+	}
+.formField INPUT, .formField SELECT, .formField TEXTAREA, .formField BUTTON {
+  vertical-align: middle;
+	border: 1px solid #c9c9c9;
+	font-family:Verdana, Geneva, sans-serif;
+	}
+.formComment, .formComment P, P.formComment {
+  font-size: 100%;
+	margin: 5px 0;
+  font-style: italic;
+	}
+.formError {
+  font-size: 100%;
+  color: #ff0000;
+	}
+TR.formSpecFields TD {
+  color: #d00;
+	border-color: #d00;
+	}
+TR.formSpecFields INPUT, TR.formSpecFields SELECT, TR.formSpecFields TEXTAREA {
+  color: #d00;
+	border-color: #d00;
+	background-color: #fdd;
+	}
+TR.formSpecFields INPUT.formButton {
+	background-color: #d00;
+	color: #fff;
+	}
+INPUT.formError, SELECT.formError, TEXTAREA.formError {
+	border: 1px solid #ff0000;
+	}
+INPUT.formButton, INPUT.userButton {
+  font-size: 100%;
+  font-weight: bold;
+	border: 1px solid #c9c9c9;
+	background-color: #ccc;
+	/*height: 20px;*/
+	}
+#formFieldUPLOAD{
+	padding-top: 5px;
+	border-top: 1px dotted #c9c9c9;
+	}
+#formLabelUPLOAD {
+  padding: 7px 6px 6px 0;
+	}
+#formCommentTEXT {
+	padding: 5px 0;
+	}
+#formLabelNO_SEND {
+	font-size: 10px;
+	line-height: 10px;
+	}
+A.editContainerBLOCK, A.editContainerNONE {
+	padding-left: 20px;
+	text-decoration: none;
+	}
+A.editContainerBLOCK SPAN, A.editContainerNONE SPAN {
+	border-bottom: 1px dashed;
+	}
+A.editContainerBLOCK {
+	background: transparent url('arrow_down.gif') no-repeat 0 2px;
+	}
+A.editContainerNONE {
+	background: transparent url('arrow_right.gif') no-repeat 0 2px;
+	}
+DIV.editContainer {
+	display: block;
+	margin-top: 5px;
+	padding-left: 20px;
+	}
+
+.formTab {
+	border-top: 1px solid #c9c9c9;
+	font-weight: bold;
+	}
+.formTab A.collapsed, .formTab A.expanded {
+	display: block;
+	padding: 7px 5px 7px 20px;
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	margin: 1px 0;
+	background-color: #c9c9c9;
+	font-size: 100%;
+	}
+.formTab A.collapsed {
+	background-image: url('branch_collapsed.gif');
+	}
+.formTab A.expanded {
+	background-image: url('branch_expanded.gif');
+	}
+.formButtons {
+	border-top: 1px solid #c9c9c9;
+	padding: 6px 0;
+	}
+.disabled {
+	background-color: #efefef;
+	color: #888888;
+	}
+.requared {
+	color: #ff0000;
+	}
+.checkSameBoxes {
+	}
+
+/* Форма регистрации */
+
+#loginBlock, #remindBlock1 {
+	width: 49%;
+	float: left;
+	}
+#regBlock, #remindBlock2 {
+	width: 49%;
+	float: right;
+	}
+#remindBlock {
+	width: 100%;
+	clear: both;
+	}
+
+/* служебные \xD1\x82аблицы */
+
+.servTable {
+  border-collapse: collapse;
+  border: 1px solid #fff;
+	}
+.servTable TD, .servTable TH,
+TABLE.formTable TD TABLE.servTable TD,
+TABLE.formTable TD TABLE.servTable TH {
+  border: 1px solid #fff;
+  font-size: 90%;
+  padding: 3px;
+	color:#222;
+	}
+.servTable INPUT, .servTable SELECT, .servTable TEXTAREA {
+	border: 1px solid #CCC;
+	font-size: 110%;
+	vertical-align: middle;
+	}
+.servTable TD {
+	vertical-align: top;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	}
+.servTable TD TD {
+  border: 0;
+	}
+.servTable TH {
+  background-color: #ccc;
+  font-size: 90%;
+  font-weight: bold;
+	text-align: center;
+	}
+.servTable TD {
+  background-color: #f2f2f2;
+	}
+.servTable TR.row0 TD, .servTable TR.row0 TD {
+  background-color: #f2f2f2;
+	}
+.servTable TR.row1 TD, .servTable TR.row1 TD {
+  background-color: #e5e5e5;
+	}
+.servTable TD.no, .servTable TD.num, .servTable TD.sum {
+	text-align: right;
+	}
+.servTable TD.date {
+	white-space: nowrap;
+	text-align: center;
+	}
+.servTable TD.edit {
+	text-align: center;
+	}
+.servTable TD.spacer {
+	background-color: transparent !important;
+	padding: 0 !important;
+	width: 20px;
+	}
+.servTable SPAN.date {
+	float: left;
+	}
+.servTable SPAN.time {
+	float: right;
+	}
+
+/* календарь */
+
+.datepickerControl {
+	z-index: 1000;
+	}
+
+/* цветовые обозначения в формах */
+
+TD.enabledCheckbox, 
+TABLE.servTable TD.enabledCheckbox, 
+TABLE.formTable TABLE.servTable TD.enabledCheckbox {
+  background-color: #d00;
+  padding: 0px;
+	}
+
+TD.disabledCheckbox, 
+TABLE.servTable TD.disabledCheckbox, 
+TABLE.formTable TABLE.servTable TD.disabledCheckbox {
+  background-color: #ccc;
+  padding: 0px;
+	}
+
+/* цветовые обозначения в системном меню */
+
+.editorTools, .edit SELECT, #toolbarMenu OPTION {
+  color: #d00;
+  background-color: #fdd;
+	}
+
+#toolbarMenu OPTION.developerTools {
+  color: #6b8e23;  
+  background-color: #f8ffeb;
+	}
+
+#toolbarMenu OPTION.superuserTools {
+  color: #ff4500;  
+  background-color: #fff0eb;
+	}
+
+/* форма упорядочивания */
+
+#orderList {
+	border: 1px solid #c9c9c9;
+	padding: 0;
+	margin: 0 0 10px 0;
+	list-style-type: none;
+	}
+#orderList LI {
+	font-size: 100%;
+	cursor: move;
+	margin: 5px;
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0 2px;
+	padding: 0 0 0 15px;
+	}
+#orderList LI:hover {
+	color: #d00;
+	}
+
+/* меню справочников */
+
+#refbooksMenu {
+  background-color: #e5e5e5;
+	}
+UL.refbooksMenu {
+	margin: 0;
+	padding: 0;
+	}
+UL.refbooksMenu LI {
+	list-style-type: none;
+	display: inline;
+	}
+UL.refbooksMenu .current {
+	font-weight: bold;
+	}
+
+/* всплывающие окна */
+
+body.popupPic {
+  margin: 0;
+  padding: 0;
+	}
+
+body.popupWin {
+	margin: 0;
+	padding: 0 10px;
+	}
+
+/* prev/next navigation for help book */
+
+#helpFooter {
+	font-size: 80%;
+	border-top: 1px solid #FFF;
+	padding-top: 10px;
+	color: #666;
+	}
+#helpFooter .next, #helpFooter .prev {
+	display: block;
+	width: 30%;
+	}
+#helpFooter .next {
+	float: right;
+	background: url("next.gif") no-repeat right; 
+	text-align: right;
+	padding-right: 15px;
+	}
+#helpFooter .prev {
+	float: left;
+	background: url("prev.gif") no-repeat left;
+	padding-left: 15px;
+	}
+#helpFooter .up {
+	float: left;
+	width: 33%;
+	text-align: center;
+	}
+
+/* флажки */
+
+.flag {
+	font-size: 80%;
+	color: #fff;
+	font-family: "Trebuchet MS", "Geneva CY", Verdana, Helvetica, sans-serif; 
+	font-weight: bold;
+}
+.flag.new {
+	background-color: #ff6600;
+	}
+.flag.draft {
+  background-color: #0066ff;
+	}
+.flag.submitted {
+  background-color: #d00;
+	}
+.flag.rejected {
+  background-color: #808080;
+	}
+
+/* tinyMCE */
+
+.tinymcePanel {
+  float: left;
+	}
+
+/* misc */
+
+.hint {
+	font-size: 90%;
+	color: #6495ed;
+	}
+.ok {
+	font-size: 90%;
+	color: #9acd32;
+	}
+.nok {
+	font-size: 90%;
+	color: #dd0000;
+	}
+.counter {
+	font-weight: bold;
+	}
+.normal {
+	font-weight: normal;
+	}
+.center {
+	text-align: center;
+	}
+.right {
+	text-align: right;
+	}

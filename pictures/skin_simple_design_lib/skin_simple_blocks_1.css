@@ -1,0 +1,179 @@
+/* blocks */
+
+#page {
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #FFF;
+	}
+
+.blockContent {
+	border-width: 1px 0 0 1px;
+	border-style: solid;
+	border-color: #FFF;
+	padding: 10px;
+	}
+#logo .blockContent {
+	background-color: #ACACAC;
+	text-align: center;
+	height: 100px;
+	}
+#service .blockContent {
+	background-color: #B6B6B6;
+	height: 100px;
+	position: relative;
+	}
+#registration .blockContent {
+	background-color: #C0C0C0;
+	height: 100px;
+	}
+#menu .blockContent {
+	background-color: #CACACA;
+	}
+#content .blockContent, 
+#contentNoAdds .blockContent, 
+#contentFull .blockContent {
+	background-color: #F2F2F2;
+	}
+#updatesBlock.blockContent, #newsBlock.blockContent {
+	background-color: #E3E3E3;
+	} 
+#base, #addons .blockContent {
+	background-color: #D4D4D4;
+	} 
+#buttons .blockContent {
+	background-color: #DEDEDE;
+	}
+#copyright .blockContent {
+	background-color: #E8E8E8;
+	}
+
+/* blocks' headers */
+
+#service H1,
+#registration H2, #menu H2, #addons H2, 
+#updates H2, #news H2,
+#content H1, #contentNoAdds H1, #contentFull H1 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	}
+#service H1, #registration H2, #menu H2, #addons H2, #updates H2 {
+  color: #FFF;
+	}
+#service H1 A, #service H1 A:visited {
+	color: #FFF;
+	text-decoration: none;
+	}
+#content .blockHeader H1, #contentNoAdds .blockHeader H1, #contentFull .blockHeader H1 {
+	color: #444;
+	}
+#content #updates H2, #content #news H2 {
+	color: #666;
+	}
+
+/* service */
+
+#siteMenu {
+	padding: 0;
+	margin: 0;
+	margin-left: -10px;
+	*margin-left: 0;
+	}
+#siteMenu LI {
+	list-style-type: none;
+	padding: 10px 0 10px 10px;
+	display: block;
+	float: left;
+	font-size: 80%;
+	*padding-left: 0;
+	}
+#siteMenu LI#rss {
+	float: right;
+	padding: 10px;
+	*padding-right: 0;
+	}
+#siteMenu A SPAN:before, #siteMenu SPAN SPAN:before {
+	content: '[';
+	}
+#siteMenu A SPAN:after, #siteMenu SPAN SPAN:after {
+	content: ']';
+	}
+
+/* registration */
+
+#registration {
+	}
+#registration FORM {
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+	}
+#registration INPUT, #registration SPAN, #registration A {
+	display: block;
+	font-size: 80%;
+	}
+#password, #doit, #userRightsName, #userLogin {
+	float: left;
+	}
+#login, #password {
+	font-size: 80%;
+	border: 1px solid #AAA;
+	color: #666;
+	margin: 1px 0;
+	padding: 1px;
+	}
+#doit {
+	border: 1px solid #FFF;
+	color: #FFF;
+	background-color: #C0C0C0;
+	height: 15px;
+	margin: 2px;
+	padding: 2px 3px;
+	font-size: 80%;
+	}
+#personal, #remind, #logout {
+	clear: left;
+	}
+
+/* menu */
+
+.rubricator UL {
+	margin: 0;
+	text-indent: 0;
+	padding-left: 15px;
+	color: #666;
+	font-size: 90%;
+	}
+.rubricator LI {
+	padding: 0;
+	margin: 5px 0;
+	}
+.rubricator LI A {
+	text-decoration: none;
+	}
+.rubricator LI SPAN {
+	color: #000;
+	}
+.rubricator UL LI {
+	font-size: 90%;
+	}
+#rubricator {
+	font-size: 140%;
+	}
+#addons .rubricator {
+	margin-bottom: 10px;
+	font-size: 120%;
+	}
+#news .blockHeader {
+	font-size: 120%;
+	}
+
+
+/* footer */
+
+#buttons P, #copyright P {
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+	color: #666;
+	}
+

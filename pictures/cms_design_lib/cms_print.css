@@ -1,0 +1,10 @@
+BODY.toolbared {
+	margin-top: 0;
+	}
+DIV#toolbar {
+	display: none;
+	}
+A.edit {
+	display: none;
+	}
+
